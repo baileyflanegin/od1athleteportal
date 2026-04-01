@@ -1382,7 +1382,6 @@ input, textarea, select { font-family: inherit; }
       <div class="sidebar-group">
         <div class="sidebar-group-label">Step 1: Get Set Up</div>
         <a class="sidebar-link" href="#next-step">Your Next Step</a>
-        <a class="sidebar-link" href="#onboarding">Onboarding</a>
         <a class="sidebar-link" href="#documents">Documents</a>
       </div>
       <div class="sidebar-group">
@@ -1416,54 +1415,70 @@ input, textarea, select { font-family: inherit; }
             <div class="progress-bar-fill" id="hero-progress-fill" style="width:0%"></div>
           </div>
         </div>
-        <a class="next-step-cta" href="#onboarding">See My Checklist →</a>
+      </div>
+
+      <div class="onboarding-inline">
+        <div class="progress-bar-wrap">
+          <div class="progress-label" id="progress-label">0 of 6 complete</div>
+          <div class="progress-bar-track">
+            <div class="progress-bar-fill" id="progress-fill" style="width:0%"></div>
+          </div>
+        </div>
+        <div class="checklist" id="checklist">
+          <div class="checklist-item" data-key="welcome" onclick="toggleCheck(this)">
+            <div class="checklist-box"></div>
+            <div class="checklist-text">
+              <div class="checklist-name">Read Your Welcome Letter</div>
+              <div class="checklist-sub">Review your OD1 welcome materials in My Documents <span class="checklist-tag">Day 1</span></div>
+            </div>
+          </div>
+          <div class="checklist-item" data-key="opendorse" onclick="toggleCheck(this)">
+            <div class="checklist-box"></div>
+            <div class="checklist-text">
+              <div class="checklist-name">Set Up Your All Star Opendorse Account</div>
+              <div class="checklist-sub">Where your deals and payments live — opendorse.com <span class="checklist-tag">Day 1</span></div>
+            </div>
+          </div>
+          <div class="checklist-item" data-key="socials" onclick="toggleCheck(this)">
+            <div class="checklist-box"></div>
+            <div class="checklist-text">
+              <div class="checklist-name">Connect All Social Accounts on Opendorse</div>
+              <div class="checklist-sub">Link your Instagram, TikTok, Twitter and more — opendorse.com &nbsp;·&nbsp; <a href="https://drive.google.com/file/d/1C3ZmOrnzxyJFFYSUW5TegGZoMJGxfXBj/view?usp=drive_link" target="_blank" style="color:var(--green)">Instagram Guide →</a> <span class="checklist-tag">Day 1</span></div>
+            </div>
+          </div>
+          <div class="checklist-item" data-key="survey" onclick="toggleCheck(this)">
+            <div class="checklist-box"></div>
+            <div class="checklist-text">
+              <div class="checklist-name">Complete Your Athlete Survey</div>
+              <div class="checklist-sub">Help us know you better so we can pitch you to the right brands <span class="checklist-tag">First Week</span></div>
+            </div>
+          </div>
+          <div class="checklist-item" data-key="brands" onclick="toggleCheck(this)">
+            <div class="checklist-box"></div>
+            <div class="checklist-text">
+              <div class="checklist-name">Reach Out to 5 Brands</div>
+              <div class="checklist-sub">Use the Brand Outreach section to generate your personalized DM templates <span class="checklist-tag">First Month</span></div>
+            </div>
+          </div>
+          <div class="checklist-item" data-key="market" onclick="toggleCheck(this)">
+            <div class="checklist-box"></div>
+            <div class="checklist-text">
+              <div class="checklist-name">Review Your Media Kit</div>
+              <div class="checklist-sub">Your shareable brand profile — coming soon <span class="checklist-tag">Coming Soon</span></div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <p class="hero-note">Your deals, payments, and activations live on <a href="https://opendorse.com" target="_blank" style="color:var(--green)">opendorse.com</a>. This portal is your OD1 home base.</p>
     </div>
 
-    <!-- QUICK ACTIONS -->
-    <div class="section" id="quick-actions">
-      <div class="section-label">Quick Actions</div>
-      <div class="section-title">What Do You Need?</div>
-      <br>
-      <div class="quick-grid">
-        <a class="quick-card" href="#brand-dm">
-          <div class="quick-card-title">Submit a Brand DM</div>
-          <div class="quick-card-desc">Got a brand reaching out? Send it to your OD1 team instantly.</div>
-          <span class="quick-card-arrow">→</span>
-        </a>
-        <a class="quick-card" href="#documents">
-          <div class="quick-card-title">My Documents</div>
-          <div class="quick-card-desc">Your key OD1 documents and welcome materials.</div>
-          <span class="quick-card-arrow">→</span>
-        </a>
-        <a class="quick-card" href="#onboarding">
-          <div class="quick-card-title">My Onboarding</div>
-          <div class="quick-card-desc">Track your onboarding progress with the OD1 team.</div>
-          <span class="quick-card-arrow">→</span>
-        </a>
-        <a class="quick-card" href="#brand-outreach">
-          <div class="quick-card-title">Brand Outreach</div>
-          <div class="quick-card-desc">Generate personalized DM templates for brands you love.</div>
-          <span class="quick-card-arrow">→</span>
-        </a>
-        <a class="quick-card" href="#my-team">
-          <div class="quick-card-title">My OD1 Team</div>
-          <div class="quick-card-desc">Real people working on your behalf.</div>
-          <span class="quick-card-arrow">→</span>
-        </a>
 
-
-
-      </div>
-    </div>
 
     <!-- BRAND DM -->
     <div class="section" id="brand-dm">
-      <div class="section-label">Submit a Brand DM</div>
-      <div class="section-title">Forward Brand Outreach</div>
-      <p class="section-desc">Got a brand reaching out on Instagram, TikTok, or email? Share it with your OD1 team and we'll handle the rest.</p>
+      <div class="section-title">Brand Outreach</div>
+      <p class="section-desc">Heard from a brand? Share the details and your OD1 team will handle the next steps.</p>
 
       <div class="upload-zone" id="upload-zone">
         <input type="file" id="file-input" accept="image/*,.pdf" onchange="handleFileSelect(this)">
@@ -1484,70 +1499,10 @@ input, textarea, select { font-family: inherit; }
       <div class="success-msg" id="dm-success">✓ Sent! Your OD1 team will review this shortly.</div>
     </div>
 
-    <!-- ONBOARDING -->
-    <div class="section" id="onboarding">
-      <div class="section-label">My Onboarding</div>
-      <div class="section-title">Your Progress</div>
-      <p class="section-desc">Complete each step so your OD1 team can start pitching you to brands.</p>
-
-      <div class="progress-bar-wrap">
-        <div class="progress-label" id="progress-label">0 of 4 complete</div>
-        <div class="progress-bar-track">
-          <div class="progress-bar-fill" id="progress-fill" style="width:0%"></div>
-        </div>
-      </div>
-
-      <div class="checklist" id="checklist">
-        <div class="checklist-item" data-key="welcome" onclick="toggleCheck(this)">
-          <div class="checklist-box"></div>
-          <div class="checklist-text">
-            <div class="checklist-name">Read Your Welcome Letter</div>
-            <div class="checklist-sub">Review your OD1 welcome materials in My Documents <span class="checklist-tag">Day 1</span></div>
-          </div>
-        </div>
-        <div class="checklist-item" data-key="opendorse" onclick="toggleCheck(this)">
-          <div class="checklist-box"></div>
-          <div class="checklist-text">
-            <div class="checklist-name">Set Up Your All Star Opendorse Account</div>
-            <div class="checklist-sub">Where your deals and payments live — opendorse.com <span class="checklist-tag">Day 1</span></div>
-          </div>
-        </div>
-        <div class="checklist-item" data-key="socials" onclick="toggleCheck(this)">
-          <div class="checklist-box"></div>
-          <div class="checklist-text">
-            <div class="checklist-name">Connect All Social Accounts on Opendorse</div>
-            <div class="checklist-sub">Link your Instagram, TikTok, Twitter and more — opendorse.com &nbsp;·&nbsp; <a href="https://drive.google.com/file/d/1C3ZmOrnzxyJFFYSUW5TegGZoMJGxfXBj/view?usp=drive_link" target="_blank" style="color:var(--green)">Instagram Guide →</a> <span class="checklist-tag">Day 1</span></div>
-          </div>
-        </div>
-        <div class="checklist-item" data-key="survey" onclick="toggleCheck(this)">
-          <div class="checklist-box"></div>
-          <div class="checklist-text">
-            <div class="checklist-name">Complete Your Athlete Survey</div>
-            <div class="checklist-sub">Help us know you better so we can pitch you to the right brands <span class="checklist-tag">First Week</span></div>
-          </div>
-        </div>
-        <div class="checklist-item" data-key="brands" onclick="toggleCheck(this)">
-          <div class="checklist-box"></div>
-          <div class="checklist-text">
-            <div class="checklist-name">Reach Out to 5 Brands</div>
-            <div class="checklist-sub">Use the Brand Outreach section to generate your personalized DM templates <span class="checklist-tag">First Month</span></div>
-          </div>
-        </div>
-        <div class="checklist-item" data-key="market" onclick="toggleCheck(this)">
-          <div class="checklist-box"></div>
-          <div class="checklist-text">
-            <div class="checklist-name">Dive Into Your Media Kit</div>
-            <div class="checklist-sub">Your shareable brand profile — coming soon <span class="checklist-tag">Coming Soon</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- ATHLETE SURVEY -->
     <div class="section" id="survey">
-      <div class="section-label">Athlete Survey</div>
-      <div class="section-title">Help Us Know You</div>
-      <p class="section-desc">2 minutes to fill out — the more we know about you, the better we can pitch you to brands that actually fit.</p>
+      <div class="section-title">Athlete Survey</div>
+      <p class="section-desc">What are your favorite brands? Help the OD1 team get to know you better!</p>
 
       <form class="survey-form" id="survey-form" onsubmit="submitSurvey(event)">
         <div>
@@ -1609,9 +1564,8 @@ input, textarea, select { font-family: inherit; }
 
     <!-- BRAND OUTREACH -->
     <div class="section" id="brand-outreach">
-      <div class="section-label">Brand Outreach</div>
-      <div class="section-title">Reach Out to Brands</div>
-      <p class="section-desc">Enter up to 5 brands you'd love to work with. We'll generate a personalized DM template for each one — ready to copy and send.</p>
+      <div class="section-title">Brand Outreach</div>
+      <p class="section-desc">Hoping to work with your favorite brand? This will generate a template you can send directly to the brand. Make sure to include your Media Kit!</p>
 
       <div class="brand-inputs">
         <div class="brand-input-row"><span class="brand-num">1</span><input class="brand-input" type="text" placeholder="Brand name..." id="brand1"></div>
@@ -1628,9 +1582,8 @@ input, textarea, select { font-family: inherit; }
 
     <!-- DOCUMENTS -->
     <div class="section" id="documents">
-      <div class="section-label">My Documents</div>
-      <div class="section-title">Your Key OD1 Docs</div>
-      <p class="section-desc">All deals are managed on <a href="https://opendorse.com" target="_blank" style="color:var(--text-muted)">opendorse.com</a>. This is your OD1 home base.</p>
+      <div class="section-title">My Documents</div>
+      <p class="section-desc">Everything you need to represent yourself. Share your Media Kit with any brand that reaches out.</p>
 
       <div class="doc-list">
         <div class="doc-item">
@@ -1649,15 +1602,22 @@ input, textarea, select { font-family: inherit; }
           </div>
           <span class="doc-link" style="color:var(--text-dim);cursor:default;">Coming Soon</span>
         </div>
+        <div class="doc-item">
+          <div class="doc-icon">📋</div>
+          <div>
+            <div class="doc-name">Your Contract</div>
+            <div class="doc-sub">Your OD1 program agreement</div>
+          </div>
+          <span class="doc-link" style="color:var(--text-dim);cursor:default;">Coming Soon</span>
+        </div>
       </div>
     </div>
 
 
     <!-- GROWTH PLAYBOOK -->
     <div class="section" id="growth">
-      <div class="section-label">Your Growth Playbook</div>
-      <div class="section-title">How to Grow Your Audience</div>
-      <p class="section-desc">Based on your profile and content style, here's what moves the needle for athletes like you.</p>
+      <div class="section-title">Your Growth Playbook</div>
+      <p class="section-desc">Want to grow your audience and attract more brands? Here are the strategies that actually work for athletes like you.</p>
 
       <div class="growth-grid">
 
@@ -1702,9 +1662,8 @@ input, textarea, select { font-family: inherit; }
 
     <!-- MY TEAM -->
     <div class="section" id="my-team">
-      <div class="section-label">My OD1 Team</div>
-      <div class="section-title">Real People, Working For You</div>
-      <p class="section-desc">These are the people advocating for you every day.</p>
+      <div class="section-title">My OD1 Team</div>
+      <p class="section-desc">Real people, working for you.</p>
 
       <div class="team-grid">
         <div class="team-card">
@@ -1948,7 +1907,7 @@ function generateTemplates() {
   container.style.display = 'flex';
 
   brands.forEach(brand => {
-    const template = `Hi ${brand} team,\n\nMy name is ${name} and I'm a college athlete working with Opendorse One, a top NIL management program. I'm a genuine fan of ${brand} and would love to explore a potential partnership.\n\nI'd be happy to share more about my audience and engagement. Would you be open to a quick conversation?\n\nBest,\n${name}`;
+    const template = `Hi ${brand} team,\n\nMy name is ${name} and I'm a college athlete working with Opendorse One, a top NIL management program. I'm a genuine fan of ${brand} and would love to explore a potential partnership.\n\nI've attached my Media Kit which includes my audience stats, engagement data, and content examples — happy to share it directly.\n\nWould you be open to a quick conversation?\n\nBest,\n${name}`;
 
     const card = document.createElement('div');
     card.className = 'brand-template-card';
